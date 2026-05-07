@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { addFollowing_followers, singleUser } from "../apicalls";
+import { addFollowing_followers, singleUser } from "../apiCalls";
 
 export let follow_followers = createAsyncThunk(
   "user/follow",
