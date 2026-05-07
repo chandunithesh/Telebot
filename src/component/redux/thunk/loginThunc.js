@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchUSers } from "../apicalls";
+import { fetchUSers } from "../apiCalls";
 
 const loginValidation = createAsyncThunk(
   "auth/login",
