@@ -5,7 +5,7 @@ const loginValidation = createAsyncThunk(
   "auth/login",
   async (data, { rejectWithValue }) => {
     try {
-      const response = await fetchUSers();
+      const response = await fetchUsers();
 
       const user = response.data.find(
         (u) => u.email === data.email && u.password === data.password
