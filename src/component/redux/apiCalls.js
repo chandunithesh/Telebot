@@ -2,7 +2,7 @@ import axios from "axios";
 import Notification from './../notification/Notification';
 
 let baseUrl = "http://localhost:3000";
-export let fetchUSers = () => axios.get(`${baseUrl}/users`);
+export let fetchUsers = () => axios.get(`${baseUrl}/users`);
 export let addUser = (user) => axios.post(`${baseUrl}/users`, user);
 export let singleUser = (id) => axios.get(`${baseUrl}/users/${id}`);
 
