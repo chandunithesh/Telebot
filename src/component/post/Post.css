@@ -1,0 +1,195 @@
+/* ===== DARK THEME POST PAGE ===== */
+.post-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(circle at top left, #1e293b 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #312e81 0%, transparent 35%),
+    linear-gradient(135deg, #0f172a, #111827, #020617);
+
+  overflow: hidden;
+}
+
+/* ===== FORM CONTAINER ===== */
+.post-form {
+  width: 100%;
+  max-width: 420px;
+
+  background: rgba(17, 24, 39, 0.88);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  padding: 30px;
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(99, 102, 241, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  animation: fadeIn 0.4s ease;
+}
+
+/* ===== TITLE ===== */
+.post-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #f8fafc;
+
+  margin-bottom: 10px;
+}
+
+/* ===== INPUT GROUP ===== */
+.post-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== LABEL ===== */
+.post-group label {
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===== INPUTS ===== */
+.post-form input,
+.post-form textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+/* ===== PLACEHOLDER ===== */
+.post-form input::placeholder,
+.post-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* ===== FOCUS ===== */
+.post-form input:focus,
+.post-form textarea:focus {
+  border-color: #8b5cf6;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+}
+
+/* ===== FILE INPUT ===== */
+.post-form input[type="file"] {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* ===== BUTTON ===== */
+.post-btn {
+  padding: 14px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* ===== BUTTON HOVER ===== */
+.post-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+}
+
+/* ===== BUTTON ACTIVE ===== */
+.post-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .post-form {
+    max-width: 90%;
+    padding: 24px;
+  }
+
+  .post-title {
+    font-size: 28px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .post-page {
+    padding: 14px;
+  }
+
+  .post-form {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .post-title {
+    font-size: 24px;
+  }
+
+  .post-form input,
+  .post-form textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .post-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+}

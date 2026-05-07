@@ -1,0 +1,422 @@
+/* ===== MAIN HOME LAYOUT ===== */
+.home {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.08), transparent 25%),
+    linear-gradient(135deg, #0f172a, #111827, #020617);
+
+  color: white;
+}
+
+/* ===== USERS SIDEBAR ===== */
+.usersSection {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===== USER CARD ===== */
+.userCard {
+  position: relative;
+
+  background: rgba(17, 24, 39, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  border-radius: 24px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(99, 102, 241, 0.08);
+}
+
+.userCard::before {
+  content: "";
+
+  position: absolute;
+
+  top: -60px;
+  right: -60px;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: rgba(99, 102, 241, 0.15);
+
+  filter: blur(20px);
+}
+
+.userCard:hover {
+  transform: translateY(-6px) scale(1.02);
+
+  border-color: rgba(139, 92, 246, 0.4);
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(139, 92, 246, 0.2);
+}
+
+/* ===== PROFILE IMAGE ===== */
+.userCard img {
+  width: 78px;
+  height: 78px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 3px solid #8b5cf6;
+
+  margin-bottom: 12px;
+
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.5);
+}
+
+/* ===== USER NAME ===== */
+.userCard p {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #f8fafc;
+
+  margin-bottom: 12px;
+}
+
+/* ===== FOLLOW BUTTON ===== */
+.userCard button {
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.35);
+}
+
+.userCard button:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+
+  box-shadow: 0 8px 22px rgba(139, 92, 246, 0.4);
+}
+
+/* ===== POSTS SECTION ===== */
+.postSection {
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 280px));
+
+  justify-content: center;
+
+  gap: 24px;
+}
+
+/* ===== POST CARD ===== */
+.postCard {
+  background: rgba(17, 24, 39, 0.88);
+
+  border-radius: 26px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(59, 130, 246, 0.05);
+}
+
+.postCard:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(99, 102, 241, 0.35);
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(99, 102, 241, 0.18);
+}
+
+/* ===== POST IMAGE ===== */
+.postCard img {
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+
+  transition: 0.4s ease;
+}
+
+.postCard:hover img {
+  transform: scale(1.04);
+}
+
+/* ===== ACTIONS ===== */
+.actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 16px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== ICONS ===== */
+.icon {
+  font-size: 22px;
+
+  color: #cbd5e1;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.15);
+}
+
+/* ===== ICON COLORS ===== */
+.icon:nth-child(1):hover {
+  color: #f43f5e;
+}
+
+.icon:nth-child(2):hover {
+  color: #38bdf8;
+}
+
+.icon:nth-child(3):hover {
+  color: #facc15;
+}
+
+/* ===== LIKED ===== */
+.liked {
+  font-size: 22px;
+
+  color: #f43f5e;
+
+  cursor: pointer;
+
+  transform: scale(1.1);
+
+  transition: 0.3s ease;
+}
+
+/* ===== COMMENT SECTION ===== */
+.commentBox {
+  padding: 14px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== COMMENT LIST ===== */
+.commentList {
+  max-height: 130px;
+
+  overflow-y: auto;
+
+  margin-bottom: 10px;
+}
+
+/* ===== COMMENT ITEM ===== */
+.commentItem {
+  width: fit-content;
+
+  max-width: 90%;
+
+  padding: 8px 14px;
+
+  margin-bottom: 8px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+  color: white;
+
+  font-size: 13px;
+
+  word-break: break-word;
+
+  box-shadow: 0 5px 14px rgba(99, 102, 241, 0.25);
+}
+
+/* ===== EMPTY ===== */
+.noComment {
+  color: #94a3b8;
+
+  font-size: 13px;
+}
+
+/* ===== COMMENT INPUT ===== */
+.commentInputBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.commentInputBox input {
+  flex: 1;
+
+  padding: 10px 14px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.commentInputBox input::placeholder {
+  color: #94a3b8;
+}
+
+.commentInputBox input:focus {
+  border-color: #8b5cf6;
+
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+/* ===== COMMENT BUTTON ===== */
+.commentInputBox button {
+  border: none;
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.commentInputBox button:hover {
+  transform: scale(1.05);
+
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+}
+
+/* ===== SCROLLBAR ===== */
+.commentList::-webkit-scrollbar,
+.usersSection::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.commentList::-webkit-scrollbar-thumb,
+.usersSection::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 10px;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 950px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .usersSection {
+    width: 100%;
+
+    flex-direction: row;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+  }
+
+  .userCard {
+    min-width: 180px;
+  }
+
+  .postSection {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .home {
+    padding: 14px;
+    gap: 18px;
+  }
+
+  .postSection {
+    grid-template-columns: 1fr;
+  }
+
+  .postCard img {
+    height: 230px;
+  }
+
+  .userCard {
+    min-width: 160px;
+    padding: 16px;
+  }
+
+  .userCard img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .actions {
+    padding: 14px;
+  }
+
+  .icon,
+  .liked {
+    font-size: 20px;
+  }
+}
