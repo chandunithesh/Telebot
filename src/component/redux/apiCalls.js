@@ -1,27 +1,43 @@
 import axios from "axios";
-import Notification from './../notification/Notification';
 
-let baseUrl = "http://localhost:3000";
-export let fetchUsers = () => axios.get(`${baseUrl}/users`);
-export let addUser = (user) => axios.post(`${baseUrl}/users`, user);
-export let singleUser = (id) => axios.get(`${baseUrl}/users/${id}`);
+const baseUrl = "http://localhost:3000";
 
-// ! Followers
-export let addFollowing_followers = (data, id) =>
+// ✅ USERS
+export const fetchUsers = () => axios.get(`${baseUrl}/users`);
+
+export const addUser = (user) =>
+  axios.post(`${baseUrl}/users`, user);
+
+export const singleUser = (id) =>
+  axios.get(`${baseUrl}/users/${id}`);
+
+// ✅ FOLLOWERS
+export const addFollowing_followers = (data, id) =>
   axios.patch(`${baseUrl}/users/${id}`, data);
 
-export let fetchPost = () => axios.get(`${baseUrl}/posts`);
-export let addPost = (post) => axios.post(`${baseUrl}/posts`, post);
+// ✅ POSTS
+export const fetchPost = () =>
+  axios.get(`${baseUrl}/posts`);
 
-// ! Messages
+export const addPost = (post) =>
+  axios.post(`${baseUrl}/posts`, post);
 
-export let addMessage = (message) => axios.post(`${baseUrl}/messages`, message);
-export let fetchMessages = () => axios.get(`${baseUrl}/messages`);
+// ✅ MESSAGES
+export const addMessage = (message) =>
+  axios.post(`${baseUrl}/messages`, message);
 
-// ! Notifications
+export const fetchMessages = () =>
+  axios.get(`${baseUrl}/messages`);
 
-export let addNotification = (notification) =>axios.post(`${baseUrl}/notifications`, notification);
+// ✅ NOTIFICATIONS
+export const addNotification = (notification) =>
+  axios.post(`${baseUrl}/notifications`, notification);
 
-export let fetchNotifications = () => axios.get(`${baseUrl}/notifications`);
+export const fetchNotifications = () =>
+  axios.get(`${baseUrl}/notifications`);
 
-export let patchNotification = (data) =>axios.patch(`${baseUrl}/notifications/${data.id}`, data.value);
+export const patchNotification = (data) =>
+  axios.patch(
+    `${baseUrl}/notifications/${data.id}`,
+    data.value
+  );
