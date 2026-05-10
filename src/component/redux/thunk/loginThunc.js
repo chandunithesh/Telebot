@@ -1,10 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchUSers } from "../apiCalls";
+
 
 const loginValidation = createAsyncThunk(
   "auth/login",
   async (data, { rejectWithValue }) => {
     try {
+      // eslint-disable-next-line no-undef
       const response = await fetchUsers();
 
       const user = response.data.find(
